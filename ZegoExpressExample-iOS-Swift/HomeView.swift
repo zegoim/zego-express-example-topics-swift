@@ -14,7 +14,8 @@ struct HomeView: View {
     let topics = [
         "QuickStart",
         "PublishStream",
-        "PlayStream"
+        "PlayStream",
+        "VideoTalk"
     ]
     
     func containedView(topic: String) -> AnyView {
@@ -25,6 +26,8 @@ struct HomeView: View {
             return AnyView(PublishStreamTopicView())
         case "PlayStream":
             return AnyView(PlayStreamTopicView())
+        case "VideoTalk":
+            return AnyView(VideoTalkView())
         default:
             return AnyView(Text("None"))
         }

@@ -11,7 +11,7 @@ import ZegoExpressEngine
 
 struct PlayStreamTopicView: View {
     
-    let playView: ZGView
+    let playView: UIViewWrapper
     
     @ObservedObject var manager: PlayStreamTopicManager
     
@@ -19,7 +19,7 @@ struct PlayStreamTopicView: View {
     @State var streamID = ""
     
     init() {
-        playView = ZGView()
+        playView = UIViewWrapper()
         manager = PlayStreamTopicManager(playView: playView.view)
     }
     

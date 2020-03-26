@@ -11,7 +11,7 @@ import ZegoExpressEngine
 
 struct PublishStreamTopicView: View {
     
-    let previewView: ZGView
+    let previewView: UIViewWrapper
     
     @ObservedObject var manager: PublishStreamTopicManager
     
@@ -19,7 +19,7 @@ struct PublishStreamTopicView: View {
     @State var streamID = ""
     
     init() {
-        previewView = ZGView()
+        previewView = UIViewWrapper()
         manager = PublishStreamTopicManager(previewView: previewView.view)
     }
     

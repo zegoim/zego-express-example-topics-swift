@@ -15,7 +15,7 @@
 		8627F92224273A25005AC040 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8627F92124273A25005AC040 /* LazyView.swift */; };
 		86A750652402D65900054309 /* QuickStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A750642402D65900054309 /* QuickStartView.swift */; };
 		86A750682402D67700054309 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A750672402D67700054309 /* KeyCenter.swift */; };
-		86A7506E2402E1B000054309 /* ZGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7506D2402E1B000054309 /* ZGView.swift */; };
+		86A7506E2402E1B000054309 /* UIViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7506D2402E1B000054309 /* UIViewWrapper.swift */; };
 		86A750702404BE1100054309 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7506F2404BE1100054309 /* HomeView.swift */; };
 		86BBF91F23FFAC6C0023BE95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF91E23FFAC6C0023BE95 /* AppDelegate.swift */; };
 		86BBF92123FFAC6C0023BE95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBF92023FFAC6C0023BE95 /* SceneDelegate.swift */; };
@@ -24,7 +24,12 @@
 		86BBF92B23FFAC6F0023BE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86BBF92923FFAC6F0023BE95 /* LaunchScreen.storyboard */; };
 		86CDE3822428B97600097F70 /* PublishStreamTopicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3812428B97600097F70 /* PublishStreamTopicManager.swift */; };
 		86CDE3862429DC1400097F70 /* PlayStreamTopicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3852429DC1400097F70 /* PlayStreamTopicManager.swift */; };
-		86CDE3882429DC8F00097F70 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3872429DC8F00097F70 /* ViewExtension.swift */; };
+		86CDE3882429DC8F00097F70 /* ZegoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3872429DC8F00097F70 /* ZegoExtension.swift */; };
+		86CDE394242A6D1700097F70 /* VideoTalkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE393242A6D1700097F70 /* VideoTalkView.swift */; };
+		86CDE396242A739400097F70 /* VideoTalkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE395242A739400097F70 /* VideoTalkManager.swift */; };
+		86CDE398242A75DF00097F70 /* VideoTalkViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE397242A75DF00097F70 /* VideoTalkViewObject.swift */; };
+		86CDE39C242A867400097F70 /* QGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE39B242A867400097F70 /* QGrid.swift */; };
+		86CDE3A3242BC39E00097F70 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3A2242BC39E00097F70 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +55,7 @@
 		86A750642402D65900054309 /* QuickStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickStartView.swift; sourceTree = "<group>"; };
 		86A750672402D67700054309 /* KeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCenter.swift; sourceTree = "<group>"; };
 		86A750692402D78E00054309 /* ZegoExpressExample-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZegoExpressExample-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		86A7506D2402E1B000054309 /* ZGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGView.swift; sourceTree = "<group>"; };
+		86A7506D2402E1B000054309 /* UIViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewWrapper.swift; sourceTree = "<group>"; };
 		86A7506F2404BE1100054309 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		86BBF91B23FFAC6C0023BE95 /* ZegoExpressExample-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZegoExpressExample-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BBF91E23FFAC6C0023BE95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +66,12 @@
 		86BBF92C23FFAC6F0023BE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86CDE3812428B97600097F70 /* PublishStreamTopicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishStreamTopicManager.swift; sourceTree = "<group>"; };
 		86CDE3852429DC1400097F70 /* PlayStreamTopicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStreamTopicManager.swift; sourceTree = "<group>"; };
-		86CDE3872429DC8F00097F70 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		86CDE3872429DC8F00097F70 /* ZegoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZegoExtension.swift; sourceTree = "<group>"; };
+		86CDE393242A6D1700097F70 /* VideoTalkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTalkView.swift; sourceTree = "<group>"; };
+		86CDE395242A739400097F70 /* VideoTalkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTalkManager.swift; sourceTree = "<group>"; };
+		86CDE397242A75DF00097F70 /* VideoTalkViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTalkViewObject.swift; sourceTree = "<group>"; };
+		86CDE39B242A867400097F70 /* QGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QGrid.swift; sourceTree = "<group>"; };
+		86CDE3A2242BC39E00097F70 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,9 @@
 		860B638E24062B8600D0E9C8 /* VideoTalk */ = {
 			isa = PBXGroup;
 			children = (
+				86CDE393242A6D1700097F70 /* VideoTalkView.swift */,
+				86CDE395242A739400097F70 /* VideoTalkManager.swift */,
+				86CDE397242A75DF00097F70 /* VideoTalkViewObject.swift */,
 			);
 			path = VideoTalk;
 			sourceTree = "<group>";
@@ -104,10 +117,10 @@
 		86A750622402D61400054309 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				860B638E24062B8600D0E9C8 /* VideoTalk */,
 				86A750632402D61A00054309 /* QuickStart */,
 				860B638824062AE100D0E9C8 /* PublishStream */,
 				860B638924062AEA00D0E9C8 /* PlayStream */,
+				860B638E24062B8600D0E9C8 /* VideoTalk */,
 			);
 			path = Topics;
 			sourceTree = "<group>";
@@ -124,10 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				86A750672402D67700054309 /* KeyCenter.swift */,
-				86A7506D2402E1B000054309 /* ZGView.swift */,
-				8627F92124273A25005AC040 /* LazyView.swift */,
+				86CDE3872429DC8F00097F70 /* ZegoExtension.swift */,
 				861EE5912428659A00C177BE /* AnyGestureRecognizer.swift */,
-				86CDE3872429DC8F00097F70 /* ViewExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				86A750662402D66400054309 /* Helper */,
+				86CDE39D242A86A400097F70 /* SupportingViews */,
 				86A750622402D61400054309 /* Topics */,
 				86BBF91E23FFAC6C0023BE95 /* AppDelegate.swift */,
 				86BBF92023FFAC6C0023BE95 /* SceneDelegate.swift */,
@@ -180,6 +192,17 @@
 				8627F95424285823005AC040 /* ZegoExpressEngine.framework */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		86CDE39D242A86A400097F70 /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+				86A7506D2402E1B000054309 /* UIViewWrapper.swift */,
+				8627F92124273A25005AC040 /* LazyView.swift */,
+				86CDE39B242A867400097F70 /* QGrid.swift */,
+				86CDE3A2242BC39E00097F70 /* TextView.swift */,
+			);
+			path = SupportingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,19 +278,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CDE396242A739400097F70 /* VideoTalkManager.swift in Sources */,
 				860B638D24062B2C00D0E9C8 /* PlayStreamTopicView.swift in Sources */,
 				86A750652402D65900054309 /* QuickStartView.swift in Sources */,
 				861EE5922428659A00C177BE /* AnyGestureRecognizer.swift in Sources */,
 				86CDE3862429DC1400097F70 /* PlayStreamTopicManager.swift in Sources */,
 				86A750702404BE1100054309 /* HomeView.swift in Sources */,
-				86A7506E2402E1B000054309 /* ZGView.swift in Sources */,
+				86A7506E2402E1B000054309 /* UIViewWrapper.swift in Sources */,
 				860B638B24062B1B00D0E9C8 /* PublishStreamTopicView.swift in Sources */,
 				86A750682402D67700054309 /* KeyCenter.swift in Sources */,
+				86CDE398242A75DF00097F70 /* VideoTalkViewObject.swift in Sources */,
 				86BBF91F23FFAC6C0023BE95 /* AppDelegate.swift in Sources */,
 				8627F92224273A25005AC040 /* LazyView.swift in Sources */,
 				86CDE3822428B97600097F70 /* PublishStreamTopicManager.swift in Sources */,
 				86BBF92123FFAC6C0023BE95 /* SceneDelegate.swift in Sources */,
-				86CDE3882429DC8F00097F70 /* ViewExtension.swift in Sources */,
+				86CDE39C242A867400097F70 /* QGrid.swift in Sources */,
+				86CDE3A3242BC39E00097F70 /* TextView.swift in Sources */,
+				86CDE394242A6D1700097F70 /* VideoTalkView.swift in Sources */,
+				86CDE3882429DC8F00097F70 /* ZegoExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200324;
+				CURRENT_PROJECT_VERSION = 200326;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
 				DEVELOPMENT_TEAM = Y98YBP7T6D;
 				ENABLE_PREVIEWS = YES;
@@ -435,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200324;
+				CURRENT_PROJECT_VERSION = 200326;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
 				DEVELOPMENT_TEAM = Y98YBP7T6D;
 				ENABLE_PREVIEWS = YES;

@@ -132,8 +132,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
 
 
 struct QuickStartView: View {
-    var previewView = ZGView()
-    var playView = ZGView()
+    var previewView = UIViewWrapper()
+    var playView = UIViewWrapper()
     
     @ObservedObject var coordinator = QuickStartCoordinator()
     
