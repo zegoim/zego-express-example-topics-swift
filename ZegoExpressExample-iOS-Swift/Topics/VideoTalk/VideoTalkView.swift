@@ -83,8 +83,10 @@ struct VideoTalkView: View {
     }
 }
 
+#if DEBUG
 struct VideoTalkView_Previews: PreviewProvider {
     static var previews: some View {
         VideoTalkView()
     }
 }
+#endif

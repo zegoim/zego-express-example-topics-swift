@@ -24,6 +24,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
     @Published var publisherState: ZegoPublisherState = .noPublish
     @Published var playerState: ZegoPlayerState = .noPlay
     
+    @Published var actionLog: String = ""
+    
     // MARK: - Step 1: CreateEngine
     
     func createEngine() {
@@ -33,6 +35,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
         
         // Notify View that engine state changed
         isEngineActive = true
+        
+        showLog(" 🚀 Create ZegoExpressEngine")
     }
     
     
@@ -45,6 +49,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
         
         // Login room
         ZegoExpressEngine.shared().loginRoom(roomID, user: user)
+        
+        showLog(" 🚪 Start login room, roomID: \(roomID)")
     }
     
     
@@ -62,6 +68,7 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
         // If streamID is empty @"", SDK will pop up an UIAlertController if "isTestEnv" is set to YES
         ZegoExpressEngine.shared().startPublishingStream(streamID)
         
+        showLog(" 📤 Start publishing stream, streamID: \(streamID)")
     }
     
     
@@ -74,6 +81,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
         
         // If streamID is empty @"", SDK will pop up an UIAlertController if "isTestEnv" is set to YES
         ZegoExpressEngine.shared().startPlayingStream(streamID, canvas: playCanvas)
+        
+        showLog(" 📥 Strat playing stream, streamID: \(streamID)")
     }
 
     
@@ -93,6 +102,8 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
         roomState = .disconnected
         publisherState = .noPublish
         playerState = .noPlay
+        
+        showLog(" 🏳️ Destroy ZegoExpressEngine")
     }
     
     
@@ -115,18 +126,31 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
     // MARK: - ZegoEventHandler Delegate
     
     func onRoomStateUpdate(_ state: ZegoRoomState, errorCode: Int32, extendedData: [AnyHashable : Any]?, roomID: String) {
-        NSLog(" 🚩 🚪 Room state update, state: \(state.rawValue), errorCode: \(errorCode), roomID: \(roomID)")
+        showLog(" 🚩 🚪 Room state update, state: \(state.rawValue), errorCode: \(errorCode), roomID: \(roomID)")
+        
         roomState = state
     }
     
     func onPublisherStateUpdate(_ state: ZegoPublisherState, errorCode: Int32, extendedData: [AnyHashable : Any]?, streamID: String) {
-        NSLog(" 🚩 📤 Publisher state update, state: \(state.rawValue), errorCode: \(errorCode), streamID: \(streamID)")
+        showLog(" 🚩 📤 Publisher state update, state: \(state.rawValue), errorCode: \(errorCode), streamID: \(streamID)")
+        
         publisherState = state
     }
     
     func onPlayerStateUpdate(_ state: ZegoPlayerState, errorCode: Int32, extendedData: [AnyHashable : Any]?, streamID: String) {
-        NSLog(" 🚩 📥 Player state update, state: \(state.rawValue), errorCode: \(errorCode), streamID: \(streamID)")
+        showLog(" 🚩 📥 Player state update, state: \(state.rawValue), errorCode: \(errorCode), streamID: \(streamID)")
+        
         playerState = state
+    }
+    
+    // MARK: Print Log
+    func showLog(_ text: String) {
+        if actionLog.count > 0 {
+            actionLog.append("\n\(text)")
+        } else {
+            actionLog.append(text)
+        }
+        NSLog(text)
     }
 }
 
@@ -144,19 +168,28 @@ struct QuickStartView: View {
         GeometryReader { reader in
             ScrollView {
                 VStack {
-                    Text("")
                     
-                    HStack {
-                        self.previewView.frame(width: reader.size.width / 2 - 20, height: reader.size.width / 2 * 1.5, alignment: .center)
-                            .background(Color(UIColor.secondarySystemBackground))
+                    LogTextView(text: self.$coordinator.actionLog).frame(height: 60)
+                    
+                    HStack(spacing: 15) {
+                        ZStack(alignment: .top) {
+                            self.previewView.frame(width: reader.size.width / 2 - 20, height: reader.size.width / 2 * 1.5, alignment: .center)
+                                .background(Color(UIColor.secondarySystemBackground))
+                            
+                            Text("Local Preview View").padding(5).font(.footnote)
+                        }
 
-                        self.playView.frame(width: reader.size.width / 2 - 20, height: reader.size.width / 2 * 1.5, alignment: .center)
-                            .background(Color(UIColor.secondarySystemBackground))
-                    }.padding(.vertical, 10)
+                        ZStack(alignment: .top) {
+                            self.playView.frame(width: reader.size.width / 2 - 20, height: reader.size.width / 2 * 1.5, alignment: .center)
+                                .background(Color(UIColor.secondarySystemBackground))
+                            
+                            Text("Remote Play View").padding(5).font(.footnote)
+                        }
+                    }
 
                     Divider()
 
-                    VStack() {
+                    VStack(spacing: 0) {
 
                         self.stepOneCreateEngineView()
                         
@@ -231,7 +264,8 @@ struct QuickStartView: View {
                     self.coordinator.loginRoom()
                 }) {
                     Text(self.coordinator.roomState == ZegoRoomState.connected ? "✅ LoginRoom" : "LoginRoom")
-                }.padding(.horizontal, 10)
+                }
+                .padding(.horizontal, 10)
             }
             .background(Color(UIColor.secondarySystemBackground))
         }
@@ -244,17 +278,22 @@ struct QuickStartView: View {
                 .padding(EdgeInsets(top: 10, leading: 6, bottom: 2, trailing: 5))
             HStack(spacing: 20) {
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Publish StreamID:").padding(.horizontal, 10).font(.footnote)
+                    Text("Publish StreamID:")
+                        .padding(EdgeInsets(top: 2, leading: 10, bottom: 0, trailing: 10))
+                        .font(.footnote)
+                    
                     TextField("Fill Publish Stream ID", text: self.$publishingStreamID)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(EdgeInsets(top: 5, leading: 10, bottom: 10, trailing: 10))
+                        .frame(idealWidth: 220, maxWidth: 220)
                 }
                 Spacer()
                 Button(action: {
                     self.coordinator.startPublishing(streamID: self.publishingStreamID, previewView: self.previewView.view)
                 }) {
                     Text(self.coordinator.publisherState == ZegoPublisherState.publishing ? "✅ StartPublishing" : "StartPublishing")
-                }.padding(.horizontal, 10)
+                }
+                .padding(.horizontal, 10)
             }
             .background(Color(UIColor.secondarySystemBackground))
         }
@@ -267,17 +306,22 @@ struct QuickStartView: View {
                 .padding(EdgeInsets(top: 10, leading: 6, bottom: 2, trailing: 5))
             HStack(spacing: 20) {
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("Play StreamID:").padding(.horizontal, 10).font(.footnote)
+                    Text("Play StreamID:")
+                        .padding(EdgeInsets(top: 2, leading: 10, bottom: 0, trailing: 10))
+                        .font(.footnote)
+                    
                     TextField("Fill Play Stream ID", text: self.$playingStreamID)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(EdgeInsets(top: 5, leading: 10, bottom: 10, trailing: 10))
+                        .frame(idealWidth: 220, maxWidth: 220)
                 }
                 Spacer()
                 Button(action: {
                     self.coordinator.startPlaying(streamID: self.playingStreamID, playView: self.playView.view)
                 }) {
                     Text(self.coordinator.playerState == ZegoPlayerState.playing ? "✅ StartPlaying" : "StartPlaying")
-                }.padding(.horizontal, 10)
+                }
+                .padding(.horizontal, 10)
             }
             .background(Color(UIColor.secondarySystemBackground))
         }
