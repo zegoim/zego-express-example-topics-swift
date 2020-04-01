@@ -32,9 +32,9 @@ class VideoTalkManager: NSObject, ObservableObject, ZegoEventHandler {
         }
     }
     
-    @Published var isEnableAudioOutput: Bool = true {
+    @Published var isEnableSpeaker: Bool = true {
         didSet {
-            toggleAudioOutputSwitch()
+            toggleSpeakerSwitch()
         }
     }
     
@@ -97,8 +97,8 @@ class VideoTalkManager: NSObject, ObservableObject, ZegoEventHandler {
         ZegoExpressEngine.shared().muteMicrophone(!isEnableMic)
     }
     
-    private func toggleAudioOutputSwitch() {
-        ZegoExpressEngine.shared().muteAudioOutput(!isEnableAudioOutput)
+    private func toggleSpeakerSwitch() {
+        ZegoExpressEngine.shared().muteSpeaker(!isEnableSpeaker)
     }
     
     // MARK: - ViewObject Methods

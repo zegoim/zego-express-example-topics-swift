@@ -76,8 +76,8 @@ struct VideoTalkView: View {
             }.frame(minWidth: 0, maxWidth: .infinity)
             
             VStack(alignment: .center, spacing: 5) {
-                Text("AudioOutput")
-                Toggle("Turn audio output", isOn: $manager.isEnableAudioOutput).labelsHidden()
+                Text("Speaker")
+                Toggle("Turn speaker on", isOn: $manager.isEnableSpeaker).labelsHidden()
             }.frame(minWidth: 0, maxWidth: .infinity)
         }
     }

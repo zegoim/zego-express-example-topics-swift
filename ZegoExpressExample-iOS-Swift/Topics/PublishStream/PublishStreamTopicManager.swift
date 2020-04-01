@@ -46,7 +46,7 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
         ZegoExpressEngine.createEngine(withAppID: appID, appSign: appSign, isTestEnv: isTestEnv, scenario: scenario, eventHandler: self)
         
         ZegoExpressEngine.shared().muteMicrophone(false)
-        ZegoExpressEngine.shared().muteAudioOutput(false)
+        ZegoExpressEngine.shared().muteSpeaker(false)
         ZegoExpressEngine.shared().enableCamera(true)
         ZegoExpressEngine.shared().enableHardwareEncoder(false)
         
