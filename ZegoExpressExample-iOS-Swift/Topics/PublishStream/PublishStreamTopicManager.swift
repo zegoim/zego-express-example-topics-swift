@@ -21,12 +21,14 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
     @Published var publishState = ZegoPublisherState.noPublish
     
     @Published var videoSize = CGSize(width: 0, height: 0)
-    @Published var videoFPS : Double = 0.0
+    @Published var videoCaptureFPS : Double = 0.0
+    @Published var videoEncodeFPS : Double = 0.0
+    @Published var videoSendFPS : Double = 0.0
     @Published var videoBitrate : Double = 0.0
     @Published var videoNetworkQuality = ""
     @Published var isHardwareEncode = false
     
-    var videoConfig = ZegoVideoConfig(preset: .preset1080P)
+    var videoConfig = ZegoVideoConfig(preset: .preset540P)
     var videoMirrorMode = ZegoVideoMirrorMode.onlyPreviewMirror
     var previewViewMode = ZegoViewMode.aspectFit
     
@@ -51,6 +53,7 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
         ZegoExpressEngine.shared().enableHardwareEncoder(false)
         
         videoConfig.fps = 30
+        videoConfig.bitrate = 2400;
         ZegoExpressEngine.shared().setVideoConfig(videoConfig)
         
         ZegoExpressEngine.shared().setVideoMirrorMode(videoMirrorMode)
@@ -78,7 +81,9 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
         
         // Clear state
         videoSize = CGSize(width: 0, height: 0)
-        videoFPS = 0.0
+        videoCaptureFPS = 0.0
+        videoEncodeFPS = 0.0
+        videoSendFPS = 0.0
         videoBitrate = 0.0
         videoNetworkQuality = ""
     }
@@ -108,7 +113,9 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
     }
     
     func onPublisherQualityUpdate(_ quality: ZegoPublishStreamQuality, streamID: String) {
-        videoFPS = quality.videoSendFPS
+        videoCaptureFPS = quality.videoCaptureFPS
+        videoEncodeFPS = quality.videoEncodeFPS
+        videoSendFPS = quality.videoSendFPS
         videoBitrate = quality.videoKBPS
         isHardwareEncode = quality.isHardwareEncode
         

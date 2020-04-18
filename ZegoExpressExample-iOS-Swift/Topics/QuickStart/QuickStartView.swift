@@ -26,6 +26,11 @@ class QuickStartCoordinator: NSObject, ObservableObject, ZegoEventHandler {
     
     @Published var actionLog: String = ""
     
+    override init() {
+        super.init()
+        showLog(" 🌞 SDK Version: \(ZegoExpressEngine.getVersion())")
+    }
+    
     // MARK: - Step 1: CreateEngine
     
     func createEngine() {

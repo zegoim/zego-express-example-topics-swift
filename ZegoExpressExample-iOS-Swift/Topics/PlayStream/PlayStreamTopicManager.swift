@@ -21,7 +21,9 @@ class PlayStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
     @Published var playerState = ZegoPlayerState.noPlay
     
     @Published var videoSize = CGSize(width: 0, height: 0)
-    @Published var videoFPS : Double = 0.0
+    @Published var videoRecvFPS : Double = 0.0
+    @Published var videoDecodeFPS : Double = 0.0
+    @Published var videoRenderFPS : Double = 0.0
     @Published var videoBitrate : Double = 0.0
     @Published var videoNetworkQuality = ""
     @Published var isHardwareDecode = false
@@ -68,7 +70,9 @@ class PlayStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
         
         // Clear state
         videoSize = CGSize(width: 0, height: 0)
-        videoFPS = 0.0
+        videoRecvFPS = 0.0
+        videoDecodeFPS = 0.0
+        videoRenderFPS = 0.0
         videoBitrate = 0.0
         videoNetworkQuality = ""
     }
@@ -93,7 +97,9 @@ class PlayStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
     }
     
     func onPlayerQualityUpdate(_ quality: ZegoPlayStreamQuality, streamID: String) {
-        videoFPS = quality.videoRecvFPS
+        videoRecvFPS = quality.videoRecvFPS
+        videoDecodeFPS = quality.videoDecodeFPS
+        videoRenderFPS = quality.videoRenderFPS
         videoBitrate = quality.videoKBPS
         isHardwareDecode = quality.isHardwareDecode
         

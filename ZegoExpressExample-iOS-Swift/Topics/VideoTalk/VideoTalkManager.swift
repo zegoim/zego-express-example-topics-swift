@@ -62,7 +62,7 @@ class VideoTalkManager: NSObject, ObservableObject, ZegoEventHandler {
         ZegoExpressEngine.shared().loginRoom(roomID, user: ZegoUser(userID: localUserID))
         
         // Set the publish video configuration
-        ZegoExpressEngine.shared().setVideoConfig(ZegoVideoConfig(preset: .preset720P))
+        ZegoExpressEngine.shared().setVideoConfig(ZegoVideoConfig(preset: .preset540P))
         
         // Get the local user's preview view and start preview
         let previewCanvas = ZegoCanvas(view: localUserViewObject.view.view)

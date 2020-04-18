@@ -80,7 +80,11 @@ struct PublishStreamTopicView: View {
             
             Text("Resolution: \(Int(self.manager.videoSize.width)) x \(Int(self.manager.videoSize.height))").qualityStyle()
             
-            Text("FPS: \(Int(self.manager.videoFPS)) fps").qualityStyle()
+            Text("FPS(Capture): \(Int(self.manager.videoCaptureFPS)) fps").qualityStyle()
+            
+            Text("FPS(Encode): \(Int(self.manager.videoEncodeFPS)) fps").qualityStyle()
+            
+            Text("FPS(Send): \(Int(self.manager.videoSendFPS)) fps").qualityStyle()
             
             Text("Bitrate: \(self.manager.videoBitrate, specifier: "%.2f") kb/s").qualityStyle()
             

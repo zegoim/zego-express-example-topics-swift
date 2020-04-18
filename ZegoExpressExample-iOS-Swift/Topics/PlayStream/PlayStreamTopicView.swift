@@ -79,7 +79,11 @@ struct PlayStreamTopicView: View {
             
             Text("Resolution: \(Int(self.manager.videoSize.width)) x \(Int(self.manager.videoSize.height))").qualityStyle()
             
-            Text("FPS: \(Int(self.manager.videoFPS)) fps").qualityStyle()
+            Text("FPS(Recv): \(Int(self.manager.videoRecvFPS)) fps").qualityStyle()
+            
+            Text("FPS(Decode): \(Int(self.manager.videoDecodeFPS)) fps").qualityStyle()
+            
+            Text("FPS(Render): \(Int(self.manager.videoRenderFPS)) fps").qualityStyle()
             
             Text("Bitrate: \(self.manager.videoBitrate, specifier: "%.2f") kb/s").qualityStyle()
             
