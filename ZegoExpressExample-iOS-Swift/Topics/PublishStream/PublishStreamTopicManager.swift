@@ -27,6 +27,24 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
     @Published var videoBitrate : Double = 0.0
     @Published var videoNetworkQuality = ""
     @Published var isHardwareEncode = false
+
+    var enableCamera = true {
+        didSet {
+            ZegoExpressEngine.shared().enableCamera(enableCamera)
+        }
+    }
+
+    var muteSpeaker = false {
+        didSet {
+            ZegoExpressEngine.shared().muteSpeaker(muteSpeaker)
+        }
+    }
+
+    var muteMicrophone = false {
+        didSet {
+            ZegoExpressEngine.shared().muteMicrophone(muteMicrophone)
+        }
+    }
     
     var videoConfig = ZegoVideoConfig(preset: .preset540P)
     var videoMirrorMode = ZegoVideoMirrorMode.onlyPreviewMirror
@@ -46,11 +64,12 @@ class PublishStreamTopicManager: NSObject, ObservableObject, ZegoEventHandler {
         
         NSLog(" 🚀 Create ZegoExpressEngine")
         ZegoExpressEngine.createEngine(withAppID: appID, appSign: appSign, isTestEnv: isTestEnv, scenario: scenario, eventHandler: self)
-        
-        ZegoExpressEngine.shared().muteMicrophone(false)
-        ZegoExpressEngine.shared().muteSpeaker(false)
-        ZegoExpressEngine.shared().enableCamera(true)
+
         ZegoExpressEngine.shared().enableHardwareEncoder(false)
+
+        enableCamera = true
+        muteSpeaker = false
+        muteMicrophone = false
         
         videoConfig.fps = 30
         videoConfig.bitrate = 2400;

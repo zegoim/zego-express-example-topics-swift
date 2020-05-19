@@ -17,6 +17,7 @@ struct PublishStreamTopicView: View {
     
     @State var roomID = ""
     @State var streamID = ""
+    @State private var showConfig = false
     
     init() {
         previewView = UIViewWrapper()
@@ -64,6 +65,21 @@ struct PublishStreamTopicView: View {
             }
         }
         .navigationBarTitle("Publish Stream", displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button("Setting") {
+                self.showConfig.toggle()
+            }.actionSheet(isPresented: self.$showConfig) {
+                ActionSheet(
+                    title: Text("Setting"),
+                    buttons: [
+                        .cancel { print(self.showConfig) },
+                        .default(Text("Camera: \(self.manager.enableCamera ? "On 🟢" : "Off 🔴")"), action: { self.manager.enableCamera.toggle() }),
+                        .default(Text("Microphone: \(self.manager.muteMicrophone ? "Off 🔴" : "On 🟢")"), action: { self.manager.muteMicrophone.toggle() }),
+                        .default(Text("Speaker: \(self.manager.muteSpeaker ? "Off 🔴" : "On 🟢")"), action: { self.manager.muteSpeaker.toggle() }),
+                    ]
+                )
+            }
+        )
         .onAppear {
             self.manager.createEngine()
         }
