@@ -30,6 +30,7 @@
 		86CDE398242A75DF00097F70 /* VideoTalkViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE397242A75DF00097F70 /* VideoTalkViewObject.swift */; };
 		86CDE39C242A867400097F70 /* QGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE39B242A867400097F70 /* QGrid.swift */; };
 		86CDE3A3242BC39E00097F70 /* LogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CDE3A2242BC39E00097F70 /* LogTextView.swift */; };
+		86E70D2824C6A34D00B54B42 /* AppGlobalConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E70D2724C6A34D00B54B42 /* AppGlobalConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		86CDE397242A75DF00097F70 /* VideoTalkViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTalkViewObject.swift; sourceTree = "<group>"; };
 		86CDE39B242A867400097F70 /* QGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QGrid.swift; sourceTree = "<group>"; };
 		86CDE3A2242BC39E00097F70 /* LogTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTextView.swift; sourceTree = "<group>"; };
+		86E70D2724C6A34D00B54B42 /* AppGlobalConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobalConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +168,9 @@
 				86A750662402D66400054309 /* Helper */,
 				86CDE39D242A86A400097F70 /* SupportingViews */,
 				86A750622402D61400054309 /* Topics */,
+				86E70D2624C6A30D00B54B42 /* HomePage */,
 				86BBF91E23FFAC6C0023BE95 /* AppDelegate.swift */,
 				86BBF92023FFAC6C0023BE95 /* SceneDelegate.swift */,
-				86A7506F2404BE1100054309 /* HomeView.swift */,
 				86BBF92423FFAC6F0023BE95 /* Assets.xcassets */,
 				86BBF92923FFAC6F0023BE95 /* LaunchScreen.storyboard */,
 				86BBF92C23FFAC6F0023BE95 /* Info.plist */,
@@ -203,6 +205,15 @@
 				86CDE3A2242BC39E00097F70 /* LogTextView.swift */,
 			);
 			path = SupportingViews;
+			sourceTree = "<group>";
+		};
+		86E70D2624C6A30D00B54B42 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				86A7506F2404BE1100054309 /* HomeView.swift */,
+				86E70D2724C6A34D00B54B42 /* AppGlobalConfigView.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +347,7 @@
 				86CDE39C242A867400097F70 /* QGrid.swift in Sources */,
 				86CDE3A3242BC39E00097F70 /* LogTextView.swift in Sources */,
 				86CDE394242A6D1700097F70 /* VideoTalkView.swift in Sources */,
+				86E70D2824C6A34D00B54B42 /* AppGlobalConfigView.swift in Sources */,
 				86CDE3882429DC8F00097F70 /* ZegoExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,7 +487,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200515;
+				CURRENT_PROJECT_VERSION = 200721;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
 				DEVELOPMENT_TEAM = B82BHJ5H89;
 				ENABLE_PREVIEWS = YES;
@@ -489,7 +501,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.5;
+				MARKETING_VERSION = 1.11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZegoExpressExample-iOS-Swift/ZegoExpressExample-iOS-Swift-Bridging-Header.h";
@@ -506,7 +518,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200515;
+				CURRENT_PROJECT_VERSION = 200721;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
 				DEVELOPMENT_TEAM = B82BHJ5H89;
 				ENABLE_PREVIEWS = YES;
@@ -520,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.5;
+				MARKETING_VERSION = 1.11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZegoExpressExample-iOS-Swift/ZegoExpressExample-iOS-Swift-Bridging-Header.h";

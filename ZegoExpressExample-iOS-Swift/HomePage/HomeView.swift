@@ -43,6 +43,11 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitle("ZegoExpressExample", displayMode: .large)
+            .navigationBarItems(trailing:
+                NavigationLink(destination: AppGlobalConfigView()) {
+                    Image("Setting")
+                }
+            )
         }
     }
 }
