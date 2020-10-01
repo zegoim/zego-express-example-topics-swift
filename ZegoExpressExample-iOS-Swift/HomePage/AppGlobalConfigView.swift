@@ -29,6 +29,8 @@ struct AppGlobalConfigView: View {
                 }
 
                 Text("Demo Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String) (beta)")
+                
+                Text("Demo BuildNumber: \(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)")
             }
 
             Section(header: Text("Note")) {

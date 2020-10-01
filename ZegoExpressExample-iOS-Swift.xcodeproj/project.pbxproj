@@ -74,6 +74,7 @@
 		86CDE39B242A867400097F70 /* QGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QGrid.swift; sourceTree = "<group>"; };
 		86CDE3A2242BC39E00097F70 /* LogTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTextView.swift; sourceTree = "<group>"; };
 		86E70D2724C6A34D00B54B42 /* AppGlobalConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobalConfigView.swift; sourceTree = "<group>"; };
+		CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +177,7 @@
 				86BBF92C23FFAC6F0023BE95 /* Info.plist */,
 				86BBF92623FFAC6F0023BE95 /* Preview Content */,
 				86A750692402D78E00054309 /* ZegoExpressExample-iOS-Swift-Bridging-Header.h */,
+				CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */,
 			);
 			path = "ZegoExpressExample-iOS-Swift";
 			sourceTree = "<group>";
@@ -246,7 +248,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Zego;
 				TargetAttributes = {
 					86BBF91A23FFAC6C0023BE95 = {
@@ -368,6 +370,7 @@
 /* Begin XCBuildConfiguration section */
 		86BBF92D23FFAC6F0023BE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -392,6 +395,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -428,6 +432,7 @@
 		};
 		86BBF92E23FFAC6F0023BE95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -452,6 +457,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -482,14 +488,15 @@
 		};
 		86BBF93023FFAC6F0023BE95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200721;
+				CURRENT_PROJECT_VERSION = 201001;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
-				DEVELOPMENT_TEAM = B82BHJ5H89;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -501,8 +508,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift";
+				MARKETING_VERSION = 1.16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZegoExpressExample-iOS-Swift/ZegoExpressExample-iOS-Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -513,14 +520,15 @@
 		};
 		86BBF93123FFAC6F0023BE95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDA843AF2526307E00D4FA27 /* SampleCode.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 200721;
+				CURRENT_PROJECT_VERSION = 201001;
 				DEVELOPMENT_ASSET_PATHS = "\"ZegoExpressExample-iOS-Swift/Preview Content\"";
-				DEVELOPMENT_TEAM = B82BHJ5H89;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -532,8 +540,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift";
+				MARKETING_VERSION = 1.16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample-iOS-Swift.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZegoExpressExample-iOS-Swift/ZegoExpressExample-iOS-Swift-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
