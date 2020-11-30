@@ -147,7 +147,7 @@ class VideoTalkManager: NSObject, ObservableObject, ZegoEventHandler {
         roomState = state
     }
     
-    func onRoomStreamUpdate(_ updateType: ZegoUpdateType, streamList: [ZegoStream], roomID: String) {
+    func onRoomStreamUpdate(_ updateType: ZegoUpdateType, streamList: [ZegoStream], extendedData: [AnyHashable : Any]?, roomID: String) {
         NSLog(" 🚩 🌊 Room stream update, type: \(updateType == .add ? "Add" : "Delete"), streamsCount: \(streamList.count), roomID: \(roomID)")
         
         let allStreamIDList = viewObjectList.map{ $0.streamID }
