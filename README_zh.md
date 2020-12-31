@@ -1,33 +1,42 @@
-# Zego Express Example Topics iOS (Swift)
+# Zego Express Example Topics (Swift)
 
 [English](README.md) | [中文](README_zh.md)
 
-Zego Express iOS (Swift) 示例专题 Demo
+Zego Express (Swift) 示例专题 Demo (iOS + macOS)
 
 ## 下载 SDK
 
-此 Repository 中缺少运行 Demo 工程所需的 SDK `ZegoExpressEngine.framework`，需要下载并放入 Demo 工程的 `Libs` 文件夹中
+此 Repository 中缺少运行 Demo 工程所需的 SDK `ZegoExpressEngine.framework`，需要下载并放入 Demo 工程的 `iOS/Libs` 以及 `macOS/Libs` 文件夹中
 
-> 直接运行 Demo，编译前脚本若检测到 `Libs` 文件夹下不存在 SDK Framework 时会自动下载 SDK。也可以自行下载 SDK 并放入 `Libs` 文件夹中。
+> 直接运行 Demo，编译前脚本若检测到对应文件夹下不存在 SDK Framework 时会自动下载 SDK。也可以自行下载 SDK 并放入对应文件夹中。
 
-[https://storage.zego.im/express/video/ios/zego-express-video-ios.zip](https://storage.zego.im/express/video/ios/zego-express-video-ios.zip)
+**iOS:** [https://storage.zego.im/express/video/ios/zego-express-video-ios.zip](https://storage.zego.im/express/video/ios/zego-express-video-ios.zip)
 
-> 请注意，压缩包中有两个文件夹：`armv7-arm64` 和 `armv7-arm64-x86_64`，区别在于：
+**macOS:** [https://storage.zego.im/express/video/mac-objc/zego-express-video-mac-objc.zip](https://storage.zego.im/express/video/mac-objc/zego-express-video-mac-objc.zip)
+
+> 请注意，**iOS** 压缩包中有两个文件夹：`armv7-arm64` 和 `armv7-arm64-x86_64`，区别在于：
 
 1. `armv7-arm64` 内的动态库仅包含真机的架构（armv7, arm64）。开发者在最终上架 App 时，需要使用此文件夹下的 `ZegoExpressEngine.framework`，否则可能被 App Store 拒绝。
 
 2. `armv7-arm64-x86_64` 内的动态库包含了真机与模拟器架构（armv7, arm64, x86_64）。如果开发者需要使用到模拟器来开发调试，需要使用此文件夹下的 `ZegoExpressEngine.framework`。但是最终上架 App 时，要切换回 `armv7-arm64` 文件夹下的 Framework。（注：如果使用 CocoaPods 集成则无需担心包架构问题，CocoaPods 在 Archive 时会自动裁掉模拟器架构）
 
-> 请解压缩 `ZegoExpressEngine.framework` 并将其放在 `Libs` 目录下
+> 请解压缩对应平台的 `ZegoExpressEngine.framework` 并将其放在 `iOS/Libs` 或者 `macOS/Libs` 目录下
 
 ```tree
 .
-├── Libs
-│   └── ZegoExpressEngine.framework
-├── README_zh.md
 ├── README.md
-├── ZegoExpressExample-iOS-Swift
-└── ZegoExpressExample-iOS-Swift.xcodeproj
+├── README_zh.md
+├── ZegoExpressExample.xcodeproj
+├── iOS
+│   └── Libs
+│       └── ZegoExpressEngine.framework
+├── macOS
+│   └── Libs
+│       └── ZegoExpressEngine.framework
+├── Shared
+├── Tests iOS
+├── Tests macOS
+└── Tests Shared
 ```
 
 ## 运行示例代码

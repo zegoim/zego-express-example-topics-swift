@@ -1,33 +1,42 @@
-# Zego Express Example Topics iOS (Swift)
+# Zego Express Example Topics (Swift)
 
 [English](README.md) | [中文](README_zh.md)
 
-Zego Express iOS (Swift) Example Topics Demo
+Zego Express (Swift) Example Topics Demo (iOS + macOS)
 
 ## Download SDK
 
-The SDK `ZegoExpressEngine.framework` required to run the Demo project is missing from this Repository, and needs to be downloaded and placed in the `Libs` folder of the Demo project
+The SDK `ZegoExpressEngine.framework` required to run the Demo project is missing from this Repository, and needs to be downloaded and placed in the `iOS/Libs` and `macOS/Libs` folder of the Demo project.
 
-> Run Demo directly, if the pre-compilation script detects that there is no SDK Framework under `Libs`, it will automatically download the SDK. You can also download it yourself and put it in the `Libs` folder.
+> Run Demo directly, if the pre-compilation script detects that there is no SDK Framework under the folder, it will automatically download the SDK. You can also download it yourself and put it in the specific platform's folder.
 
-[https://storage.zego.im/express/video/ios/zego-express-video-ios.zip](https://storage.zego.im/express/video/ios/zego-express-video-ios.zip)
+**iOS:** [https://storage.zego.im/express/video/ios/zego-express-video-ios.zip](https://storage.zego.im/express/video/ios/zego-express-video-ios.zip)
 
-> Note that there are two folders in the zip file: `armv7-arm64` and `armv7-arm64-x86_64`, differences:
+**macOS:** [https://storage.zego.im/express/video/mac-objc/zego-express-video-mac-objc.zip](https://storage.zego.im/express/video/mac-objc/zego-express-video-mac-objc.zip)
+
+> Note that there are two folders in the **iOS** zip file: `armv7-arm64` and `armv7-arm64-x86_64`, differences:
 
 1. The dynamic framework in `armv7-arm64` contains only the architecture of the real machine (armv7, arm64). Developers need to use `ZegoExpressEngine.framework` in this folder when distributing the app, otherwise it may be rejected by App Store.
 
 2. The dynamic framework in `armv7-arm64-x86_64` contains the real machine and simulator architecture (armv7, arm64, x86_64). If developers need to use the simulator to develop and debug, they need to use `ZegoExpressEngine.framework` in this folder. But when the app is finally distributed, you need to switch back to the Framework under the `armv7-arm64` folder. (Note: If you use CocoaPods to integrate, you do n’t need to worry about the framework architecture. CocoaPods will automatically cut the simulator architecture when Archive)
 
-> Please unzip and put the `ZegoExpressEngine.framework` under `Libs`
+> Please unzip and put the `ZegoExpressEngine.framework` under `iOS/Libs` or `macOS/Libs` folder.
 
 ```tree
 .
-├── Libs
-│   └── ZegoExpressEngine.framework
-├── README_zh.md
 ├── README.md
-├── ZegoExpressExample-iOS-Swift
-└── ZegoExpressExample-iOS-Swift.xcodeproj
+├── README_zh.md
+├── ZegoExpressExample.xcodeproj
+├── iOS
+│   └── Libs
+│       └── ZegoExpressEngine.framework
+├── macOS
+│   └── Libs
+│       └── ZegoExpressEngine.framework
+├── Shared
+├── Tests iOS
+├── Tests macOS
+└── Tests Shared
 ```
 
 ## Running the sample code
@@ -36,13 +45,13 @@ The SDK `ZegoExpressEngine.framework` required to run the Demo project is missin
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/appstore-xcode.png" width=40% height=40%>
 
-2. Open `ZegoExpressExample-iOS-Swift.xcodeproj` with Xcode.
+2. Open `ZegoExpressExample.xcodeproj` with Xcode.
 
     Open Xcode, and click `File` -> `Open...` in the upper left corner.
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/xcode-open-file.png" width=70% height=70%>
 
-    Find the `ZegoExpressExample-iOS-Swift.xcodeproj` in the sample code folder downloaded and unzipped in the first step, and click `Open`.
+    Find the `ZegoExpressExample.xcodeproj` in the sample code folder downloaded and unzipped in the first step, and click `Open`.
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/xcode-select-file-swift.png" width=70% height=70%>
 
@@ -58,11 +67,11 @@ The SDK `ZegoExpressEngine.framework` required to run the Demo project is missin
 
 4. Modify Bundle Identifier and Apple Developer Certificate.
 
-    Open Xcode, click the `ZegoExpressExample-iOS-Swift` project in left side.
+    Open Xcode, click the `ZegoExpressExample` project in left side.
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/xcode-select-project-swift.png" width=50% height=50%>
 
-    Change `Bundle Identifier` in the `General` tab. (Can be modified to `com.your-name.ZegoExpressExample-iOS-Swift`)
+    Change `Bundle Identifier` in the `General` tab. (Can be modified to `com.your-name.ZegoExpressExample`)
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/bundle-identifier-swift.png" width=90% height=90%>
 
@@ -70,7 +79,7 @@ The SDK `ZegoExpressEngine.framework` required to run the Demo project is missin
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/team-signing-swift.png" width=90% height=90%>
 
-5. The AppID and AppSign required for SDK initialization are missing from the downloaded Demo source. Please refer to [Instructions for getting AppID and AppSign](https://doc.zego.im/API/HideDoc/GetExpressAppIDGuide/GetAppIDGuideline.html) to get AppID and AppSign. If you don't fill in the correct AppID and AppSign, the source code will not run properly, so you need to modify `KeyCenter.swift` under the directory `ZegoExpressExample-iOS-Swift/Helper` to fill in the correct AppID and AppSign.
+5. The AppID and AppSign required for SDK initialization are missing from the downloaded Demo source. Please refer to [Instructions for getting AppID and AppSign](https://doc.zego.im/API/HideDoc/GetExpressAppIDGuide/GetAppIDGuideline.html) to get AppID and AppSign. If you don't fill in the correct AppID and AppSign, the source code will not run properly, so you need to modify `KeyCenter.swift` under the directory `ZegoExpressExample/Helper` to fill in the correct AppID and AppSign.
 
     <img src="https://storage.zego.im/sdk-doc/Pics/iOS/ZegoExpressEngine/Common/appid-appsign-swift.png" width=80% height=80%>
 

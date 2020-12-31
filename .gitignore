@@ -1,4 +1,3 @@
 DerivedData
-Libs/ZegoExpressEngine.framework
-ZegoExpressExample-iOS-Swift.xcodeproj/xcuserdata
-ZegoExpressExample-iOS-Swift.xcodeproj/project.xcworkspace/xcuserdata
+**/ZegoExpressEngine.framework
+**/xcuserdata
