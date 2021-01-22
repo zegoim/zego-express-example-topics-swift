@@ -13,12 +13,6 @@
 		866DA687259B028C00B75FF3 /* ZegoExpressExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA65D259B028A00B75FF3 /* ZegoExpressExampleApp.swift */; };
 		866DA68A259B028C00B75FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866DA65F259B028C00B75FF3 /* Assets.xcassets */; };
 		866DA68B259B028C00B75FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866DA65F259B028C00B75FF3 /* Assets.xcassets */; };
-		866DA6A5259B055B00B75FF3 /* ZegoExpressEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6A3259B054C00B75FF3 /* ZegoExpressEngine.framework */; platformFilter = ios; };
-		866DA6AD259B056700B75FF3 /* ZegoExpressEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6AB259B056700B75FF3 /* ZegoExpressEngine.framework */; };
-		866DA6B2259B057700B75FF3 /* ZegoExpressEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6A3259B054C00B75FF3 /* ZegoExpressEngine.framework */; };
-		866DA6B3259B057700B75FF3 /* ZegoExpressEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6A3259B054C00B75FF3 /* ZegoExpressEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		866DA6B5259B058100B75FF3 /* ZegoExpressEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6AB259B056700B75FF3 /* ZegoExpressEngine.framework */; };
-		866DA6B6259B058100B75FF3 /* ZegoExpressEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 866DA6AB259B056700B75FF3 /* ZegoExpressEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		866DA6C0259B068F00B75FF3 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA6BD259B068F00B75FF3 /* LazyView.swift */; };
 		866DA6C1259B068F00B75FF3 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA6BD259B068F00B75FF3 /* LazyView.swift */; };
 		866DA6C2259B068F00B75FF3 /* LogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA6BE259B068F00B75FF3 /* LogTextView.swift */; };
@@ -57,6 +51,12 @@
 		866DA704259B075700B75FF3 /* TestEngineModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA700259B075700B75FF3 /* TestEngineModule.swift */; };
 		866DA709259B077400B75FF3 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA6E9259B06D500B75FF3 /* KeyCenter.swift */; };
 		866DA70C259B077400B75FF3 /* KeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866DA6E9259B06D500B75FF3 /* KeyCenter.swift */; };
+		8672223F25B9533C008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; };
+		8672224025B9533C008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; };
+		8672224525B95355008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; };
+		8672224625B95355008ECAF2 /* ZegoExpressEngine.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8672224925B95359008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; };
+		8672224A25B95359008ECAF2 /* ZegoExpressEngine.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				866DA6B3259B057700B75FF3 /* ZegoExpressEngine.framework in Embed Frameworks */,
+				8672224625B95355008ECAF2 /* ZegoExpressEngine.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				866DA6B6259B058100B75FF3 /* ZegoExpressEngine.framework in Embed Frameworks */,
+				8672224A25B95359008ECAF2 /* ZegoExpressEngine.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,8 +115,6 @@
 		866DA67F259B028C00B75FF3 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		866DA683259B028C00B75FF3 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		866DA685259B028C00B75FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		866DA6A3259B054C00B75FF3 /* ZegoExpressEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoExpressEngine.framework; sourceTree = "<group>"; };
-		866DA6AB259B056700B75FF3 /* ZegoExpressEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZegoExpressEngine.framework; sourceTree = "<group>"; };
 		866DA6BD259B068F00B75FF3 /* LazyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		866DA6BE259B068F00B75FF3 /* LogTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogTextView.swift; sourceTree = "<group>"; };
 		866DA6BF259B068F00B75FF3 /* ViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWrapper.swift; sourceTree = "<group>"; };
@@ -136,6 +134,7 @@
 		866DA6FF259B075700B75FF3 /* TestRoomModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRoomModule.swift; sourceTree = "<group>"; };
 		866DA700259B075700B75FF3 /* TestEngineModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEngineModule.swift; sourceTree = "<group>"; };
 		866DA73E259B74A600B75FF3 /* SampleCode.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SampleCode.xcconfig; sourceTree = "<group>"; };
+		8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ZegoExpressEngine.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866DA6B2259B057700B75FF3 /* ZegoExpressEngine.framework in Frameworks */,
+				8672224525B95355008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866DA6B5259B058100B75FF3 /* ZegoExpressEngine.framework in Frameworks */,
+				8672224925B95359008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866DA6A5259B055B00B75FF3 /* ZegoExpressEngine.framework in Frameworks */,
+				8672223F25B9533C008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866DA6AD259B056700B75FF3 /* ZegoExpressEngine.framework in Frameworks */,
+				8672224025B9533C008ECAF2 /* ZegoExpressEngine.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +189,7 @@
 		866DA65C259B028A00B75FF3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8672223B25B952B6008ECAF2 /* Libs */,
 				866DA6BC259B068F00B75FF3 /* SupportingViews */,
 				866DA6C8259B069A00B75FF3 /* Topics */,
 				866DA6E7259B06D500B75FF3 /* Helper */,
@@ -215,7 +215,6 @@
 		866DA666259B028C00B75FF3 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				866DA6A2259B054C00B75FF3 /* Libs */,
 				866DA667259B028C00B75FF3 /* Info.plist */,
 			);
 			path = iOS;
@@ -224,7 +223,6 @@
 		866DA66D259B028C00B75FF3 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				866DA6AA259B056700B75FF3 /* Libs */,
 				866DA66E259B028C00B75FF3 /* Info.plist */,
 				866DA66F259B028C00B75FF3 /* macOS.entitlements */,
 			);
@@ -247,22 +245,6 @@
 				866DA685259B028C00B75FF3 /* Info.plist */,
 			);
 			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
-		866DA6A2259B054C00B75FF3 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				866DA6A3259B054C00B75FF3 /* ZegoExpressEngine.framework */,
-			);
-			path = Libs;
-			sourceTree = "<group>";
-		};
-		866DA6AA259B056700B75FF3 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				866DA6AB259B056700B75FF3 /* ZegoExpressEngine.framework */,
-			);
-			path = Libs;
 			sourceTree = "<group>";
 		};
 		866DA6BC259B068F00B75FF3 /* SupportingViews */ = {
@@ -350,6 +332,14 @@
 			path = "Tests Shared";
 			sourceTree = "<group>";
 		};
+		8672223B25B952B6008ECAF2 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				8672223C25B9533C008ECAF2 /* ZegoExpressEngine.xcframework */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,8 +347,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 866DA68E259B028C00B75FF3 /* Build configuration list for PBXNativeTarget "ZegoExpressExample (iOS)" */;
 			buildPhases = (
-				866DA727259B62A400B75FF3 /* [Script] Download SDK If Need */,
-				866DA735259B69E000B75FF3 /* [Script] Remove Simulator Architecture When Release */,
 				866DA660259B028C00B75FF3 /* Sources */,
 				866DA661259B028C00B75FF3 /* Frameworks */,
 				866DA662259B028C00B75FF3 /* Resources */,
@@ -377,7 +365,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 866DA691259B028C00B75FF3 /* Build configuration list for PBXNativeTarget "ZegoExpressExample (macOS)" */;
 			buildPhases = (
-				866DA730259B643200B75FF3 /* [Script] Download SDK If Need */,
 				866DA668259B028C00B75FF3 /* Sources */,
 				866DA669259B028C00B75FF3 /* Frameworks */,
 				866DA66A259B028C00B75FF3 /* Resources */,
@@ -506,63 +493,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		866DA727259B62A400B75FF3 /* [Script] Download SDK If Need */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Script] Download SDK If Need";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Download ZegoExpressEngine\nif [ ! -e \"iOS/Libs/ZegoExpressEngine.framework\" ]; then\n\n    cd $SRCROOT\n    echo \"[*] cd into: \"`pwd`\n\n    URL=\"https://storage.zego.im/express/video/ios/zego-express-video-ios.zip\"\n\n    if [ ! -d \"iOS/Libs/__sdk_download_tmp__\" ]; then\n        mkdir iOS/Libs/__sdk_download_tmp__\n    fi\n\n    echo \"[*] Downloading SDK from: $URL\"\n    curl \"$URL\" --output iOS/Libs/__sdk_download_tmp__/zego-express-video-ios.zip\n\n    cd iOS/Libs/__sdk_download_tmp__\n    echo \"[*] cd into: \"`pwd`\n\n    echo \"[*] Unzip zego-express-video-ios.zip\"\n    unzip -o zego-express-video-ios.zip\n\n    for element in `ls`; do\n        dir=$element\n        if [ -d $dir ]; then\n            cd $dir\n            echo \"[*] cd into: \"`pwd`\n            break\n        fi\n    done\n\n    if [ -d \"armv7-arm64-x86_64\" ]; then\n        cd armv7-arm64-x86_64\n        echo \"[*] cd into: \"`pwd`\n        echo \"[*] Move ZegoExpressEngine.framework from: \"`pwd`\" to: $SRCROOT/iOS/Libs\"\n        mv ZegoExpressEngine.framework $SRCROOT/iOS/Libs\n    fi\n\n    echo \"[*] Remove folder: $SRCROOT/iOS/Libs/__sdk_download_tmp__\"\n    rm -rf $SRCROOT/iOS/Libs/__sdk_download_tmp__\nfi\n";
-		};
-		866DA730259B643200B75FF3 /* [Script] Download SDK If Need */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Script] Download SDK If Need";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Download ZegoExpressEngine\nif [ ! -e \"macOS/Libs/ZegoExpressEngine.framework\" ]; then\n\n    cd $SRCROOT\n    echo \"[*] cd into: \"`pwd`\n\n    URL=\"https://storage.zego.im/express/video/mac-objc/zego-express-video-mac-objc.zip\"\n\n    if [ ! -d \"macOS/Libs/__sdk_download_tmp__\" ]; then\n        mkdir macOS/Libs/__sdk_download_tmp__\n    fi\n\n    echo \"[*] Downloading SDK from: $URL\"\n    curl \"$URL\" --output macOS/Libs/__sdk_download_tmp__/zego-express-video-mac-objc.zip\n\n    cd macOS/Libs/__sdk_download_tmp__\n    echo \"[*] cd into: \"`pwd`\n\n    echo \"[*] Unzip zego-express-video-mac-objc.zip\"\n    unzip -o zego-express-video-mac-objc.zip\n\n    for element in `ls`; do\n        dir=$element\n        if [ -d $dir ]; then\n            cd $dir\n            echo \"[*] cd into: \"`pwd`\n            break\n        fi\n    done\n    \n    echo \"[*] Move ZegoExpressEngine.framework from: \"`pwd`\" to: $SRCROOT/macOS/Libs\"\n    mv ZegoExpressEngine.framework $SRCROOT/macOS/Libs\n\n    echo \"[*] Remove folder: $SRCROOT/macOS/Libs/__sdk_download_tmp__\"\n    rm -rf $SRCROOT/macOS/Libs/__sdk_download_tmp__\nfi\n";
-		};
-		866DA735259B69E000B75FF3 /* [Script] Remove Simulator Architecture When Release */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Script] Remove Simulator Architecture When Release";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ $CONFIGURATION == \"Release\" ]; then\n\n    echo \"[*] Build release, remove simulator architecture\"\n\n    cd iOS/Libs/ZegoExpressEngine.framework\n    echo \"[*] cd into: \"`pwd`\n\n    if [ -e \"ZegoExpressEngine\" ]; then\n\n        lipo -info ZegoExpressEngine\n\n        echo \"[*] remove i386 architecture\"\n        lipo ZegoExpressEngine -remove i386 -output ZegoExpressEngine\n\n        echo \"[*] remove x86_64 architecture\"\n        lipo ZegoExpressEngine -remove x86_64 -output ZegoExpressEngine\n\n        lipo -info ZegoExpressEngine\n\n    fi\n\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		866DA660259B028C00B75FF3 /* Sources */ = {
@@ -771,7 +701,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 201231;
+				CURRENT_PROJECT_VERSION = 210121;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -784,7 +714,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = ZegoExpressExample;
 				SDKROOT = iphoneos;
@@ -801,7 +731,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 201231;
+				CURRENT_PROJECT_VERSION = 210121;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -814,7 +744,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = ZegoExpressExample;
 				SDKROOT = iphoneos;
@@ -835,7 +765,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201231;
+				CURRENT_PROJECT_VERSION = 210121;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -849,7 +779,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = ZegoExpressExample;
 				SDKROOT = macosx;
@@ -867,7 +797,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201231;
+				CURRENT_PROJECT_VERSION = 210121;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -881,7 +811,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 2.0.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "im.zego.ZegoExpressExample.${SAMPLE_CODE_DISAMBIGUATOR}";
 				PRODUCT_NAME = ZegoExpressExample;
 				SDKROOT = macosx;
